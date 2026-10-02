@@ -1,0 +1,78 @@
+/* eLogy · campagna contrassegno Est · pagine legali (.t-legale) e di ringraziamento (.t-grazie) */
+
+/* ---------- pagine legali: fascia scura in alto (per il logo bianco), testo su fondo chiaro ---------- */
+.t-legale{background:var(--paper)}
+.t-legale .leg-wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.t-legale .leg-head{background:var(--ink);color:#fff;padding:104px 0 44px;background-image:radial-gradient(120% 140% at 85% 0%,rgba(155,225,93,.10),transparent 60%)}
+.t-legale .leg-head h1{font-size:clamp(34px,6vw,52px);font-weight:600;margin-bottom:14px}
+.t-legale .leg-head .kicker{margin-bottom:14px}
+.t-legale .leg-sub{color:var(--grey);font-size:17px;max-width:640px;margin-bottom:14px}
+.t-legale .leg-date{color:#8C918B;font-size:15px;margin:0}
+.t-legale .leg-body{background:var(--paper);color:var(--ink);padding:40px 0 72px;font-size:17px;line-height:1.65}
+.t-legale .leg-body section{padding-top:12px;scroll-margin-top:20px}
+.t-legale .leg-body h2{font-size:clamp(22px,3vw,27px);font-weight:600;margin:36px 0 14px}
+.t-legale .leg-body h3{font-size:18px;font-weight:600;margin:24px 0 8px;letter-spacing:-.01em}
+.t-legale .leg-body p,.t-legale .leg-body li{color:#2A2D2B}
+.t-legale .leg-body ul,.t-legale .leg-body ol{padding-left:22px;margin:0 0 1em}
+.t-legale .leg-body li{margin:0 0 .45em}
+.t-legale .leg-body a{color:var(--green-d);text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
+.t-legale .leg-body code{font:500 14px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(21,23,22,.06);padding:2px 6px;border-radius:5px;white-space:nowrap}
+
+/* indice */
+.t-legale .leg-toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px 8px;margin-bottom:8px}
+.t-legale .leg-toc p{font:500 13px/1.2 var(--b);letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 10px}
+.t-legale .leg-toc ol{margin:0;padding-left:20px}
+.t-legale .leg-toc a{color:var(--ink);text-decoration:none}
+.t-legale .leg-toc a:hover{color:var(--green-d);text-decoration:underline}
+
+/* riquadro «in breve» con il bottone delle preferenze */
+.t-legale .leg-box{background:var(--ink);color:#fff;border-radius:16px;padding:22px;margin-bottom:8px}
+.t-legale .leg-box p{color:#E4E7E3;margin-bottom:16px}
+.t-legale .leg-box .btn-ghost{min-height:44px}
+.t-legale .leg-body .btn-ghost{min-height:44px;font-size:15px}
+.t-legale .leg-body p > .btn-ghost{color:var(--ink);border-color:rgba(21,23,22,.35);background:#fff}
+.t-legale .leg-body p > .btn-ghost:hover{border-color:var(--ink)}
+
+/* tabelle: scorrono di lato dentro il loro riquadro, mai la pagina */
+.t-legale .leg-table{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0 18px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.t-legale .leg-table:focus{outline:2px solid var(--green);outline-offset:2px}
+.t-legale table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.5}
+.t-legale th,.t-legale td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+.t-legale tr:last-child td{border-bottom:0}
+.t-legale th{font:600 13px/1.3 var(--h);letter-spacing:.02em;color:var(--ink3);background:#F1F2F0}
+.t-legale td{color:#2A2D2B}
+@media(max-width:560px){
+  .t-legale .leg-head{padding:96px 0 34px}
+  .t-legale table{min-width:520px}
+}
+
+/* ---------- pagina di ringraziamento: scura, calma ---------- */
+.t-grazie{background:var(--deep)}
+.t-grazie .gz{color:#fff;min-height:100vh;padding:104px 0 72px;background:radial-gradient(90% 70% at 80% 10%,rgba(46,168,83,.16),transparent 65%),var(--deep)}
+.t-grazie .gz-in{max-width:1080px;margin:0 auto;padding:0 20px;display:grid;gap:48px;align-items:start}
+@media(min-width:900px){.t-grazie .gz-in{grid-template-columns:1fr 340px;gap:72px}}
+.t-grazie .gz-copy{max-width:640px}
+.t-grazie .gz-tick{width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:26px;line-height:1;margin:0 0 22px;box-shadow:0 0 0 8px rgba(46,168,83,.15)}
+.t-grazie .kicker{margin-bottom:14px}
+.t-grazie h1{font-size:clamp(34px,6vw,54px);font-weight:600;margin-bottom:16px}
+.t-grazie .gz-lead{font-size:clamp(18px,2vw,21px);color:var(--grey);margin-bottom:40px}
+.t-grazie h2{font-size:clamp(21px,2.6vw,25px);font-weight:600;margin:0 0 18px}
+.t-grazie .gz-steps{list-style:none;counter-reset:s;margin:0 0 40px;padding:0}
+.t-grazie .gz-steps li{counter-increment:s;position:relative;padding:0 0 22px 56px;color:var(--grey);font-size:17px;line-height:1.6}
+.t-grazie .gz-steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(155,225,93,.55);color:var(--lime);display:grid;place-items:center;font:600 16px/1 var(--h)}
+.t-grazie .gz-steps li:not(:last-child)::after{content:"";position:absolute;left:18px;top:40px;bottom:6px;width:1px;background:rgba(155,225,93,.25)}
+.t-grazie .gz-steps b{color:#fff;display:block;font-family:var(--h);font-weight:600;margin-bottom:2px}
+.t-grazie .gz-prep{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px 22px 8px;margin-bottom:36px}
+.t-grazie .gz-prep h2{font-size:19px;margin-bottom:12px}
+.t-grazie .gz-prep ul{margin:0 0 14px;padding-left:20px;color:var(--grey);font-size:17px}
+.t-grazie .gz-prep li{margin:0 0 6px}
+.t-grazie .gz-prep li::marker{color:var(--lime)}
+.t-grazie .gz-prep p{color:#A9AEA8;font-size:16px}
+.t-grazie .gz-close{font:600 20px/1.3 var(--h);color:var(--lime);margin-bottom:22px;letter-spacing:-.01em}
+.t-grazie .btn-ghost{min-height:44px}
+.t-grazie .gz-img{margin:0;display:none}
+@media(min-width:900px){
+  .t-grazie .gz-img{display:block;position:sticky;top:40px}
+  .t-grazie .gz-img img{width:100%;height:auto;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
+}
+.t-grazie .foot,.t-legale .foot{padding-bottom:40px}

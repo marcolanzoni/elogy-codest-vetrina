@@ -1,0 +1,195 @@
+/* eLogy · landing «logistica» (IT/EN) · registro B2B: griglia ordinata, molto spazio, lime solo come accento */
+.p-logistica{--lx-line:rgba(21,23,22,.1);--lx-dline:rgba(255,255,255,.1);--lx-mute:#A9AEA8}
+
+/* ── primo schermo ─────────────────────────────────── */
+.p-logistica .lx-hero{background:var(--ink);color:#fff;padding:92px 0 0;position:relative;overflow:hidden}
+.p-logistica .lx-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 85% 20%,rgba(46,168,83,.12),rgba(46,168,83,0) 70%);pointer-events:none}
+.p-logistica .lx-hero .wrap{position:relative}
+.p-logistica .lx-hero-grid{display:grid;gap:40px}
+.p-logistica .lx-label{font:500 13px/1.3 var(--b);letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin:0 0 16px}
+.p-logistica .lx-hero h1{font-size:clamp(29px,7.6vw,56px);font-weight:600;line-height:1.1;margin:0 0 18px;max-width:15em}
+.p-logistica .lx-hero h1 span{color:var(--lime)}
+.p-logistica .lx-sub{font-size:17px;line-height:1.55;color:#D2D6D1;max-width:34em;margin:0 0 24px}
+.p-logistica .lx-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.p-logistica .lx-link{color:#fff;font:500 15px/1.2 var(--h);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding:12px 0 4px;min-height:44px;display:inline-flex;align-items:flex-end}
+.p-logistica .lx-link:hover{border-color:var(--lime)}
+.p-logistica .lx-ita{margin:20px 0 0;font-size:15px;color:var(--lx-mute);display:flex;align-items:center;gap:10px}
+.p-logistica .lx-ita::before{content:"";width:18px;height:2px;background:var(--lime);flex:none}
+
+/* pannello «da dove partono» (solo computer: sul telefono c'è la tabella più sotto) */
+.p-logistica .lx-net{display:none}
+@media(min-width:900px){
+  .p-logistica .lx-net{display:block;background:var(--panel);border:1px solid var(--lx-dline);border-radius:16px;padding:26px 26px 22px;align-self:center}
+  .p-logistica .lx-net-t{font:500 12px/1.2 var(--b);letter-spacing:.14em;text-transform:uppercase;color:var(--lx-mute);margin:0 0 6px}
+  .p-logistica .lx-net-row{padding:16px 0;border-bottom:1px solid var(--lx-dline);display:grid;gap:4px}
+  .p-logistica .lx-net-row b{font:600 16px/1.3 var(--h);color:#fff;display:flex;align-items:center;gap:10px}
+  .p-logistica .lx-net-row b::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--lime)}
+  .p-logistica .lx-net-row span{font-size:15px;line-height:1.5;color:#C4C8C3;padding-left:18px}
+  .p-logistica .lx-net-f{margin:14px 0 0;font-size:14px;color:var(--lx-mute)}
+}
+
+/* fatti chiave */
+.p-logistica .lx-facts{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--lx-dline)}
+.p-logistica .lx-facts li{padding:20px 14px 24px 0;border-bottom:1px solid var(--lx-dline)}
+.p-logistica .lx-facts li:nth-child(odd){padding-right:16px;border-right:1px solid var(--lx-dline)}
+.p-logistica .lx-facts li:nth-child(even){padding-left:16px}
+.p-logistica .lx-facts b{display:block;font:600 17px/1.25 var(--h);letter-spacing:-.01em;color:#fff;margin-bottom:6px}
+.p-logistica .lx-facts span{display:block;font-size:14px;line-height:1.4;color:var(--lx-mute)}
+@media(min-width:900px){
+  .p-logistica .lx-hero{padding:124px 0 0}
+  .p-logistica .lx-hero-grid{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:64px;align-items:center}
+  .p-logistica .lx-hero h1{font-size:min(3.9vw,50px)}
+  .p-logistica .lx-sub{font-size:19px}
+  .p-logistica .lx-facts{grid-template-columns:repeat(4,1fr);margin-top:56px}
+  .p-logistica .lx-facts li,.p-logistica .lx-facts li:nth-child(odd),.p-logistica .lx-facts li:nth-child(even){padding:26px 28px 34px;border-right:1px solid var(--lx-dline);border-bottom:0}
+  .p-logistica .lx-facts li:first-child{padding-left:0}
+  .p-logistica .lx-facts li:last-child{border-right:0}
+  .p-logistica .lx-facts b{font-size:20px}
+  .p-logistica .lx-facts span{font-size:15px}
+}
+
+/* ── sezioni ───────────────────────────────────────── */
+.p-logistica .lx-sec{padding:72px 0}
+@media(min-width:900px){.p-logistica .lx-sec{padding:120px 0}}
+.p-logistica .lx-white{background:#fff;color:var(--ink)}
+.p-logistica .lx-paper{background:var(--paper);color:var(--ink)}
+.p-logistica .lx-dark{background:var(--ink);color:#fff}
+.p-logistica .lx-sec h2{font-size:clamp(27px,6.2vw,44px);font-weight:600;line-height:1.12;max-width:19em;margin-bottom:16px}
+.p-logistica .lx-sec .lead{font-size:17px;line-height:1.6;color:var(--ink2);max-width:38em;margin:0}
+.p-logistica .lx-dark .lead{color:#C4C8C3}
+.p-logistica .lx-dark .eyebrow{color:var(--lime)}
+@media(min-width:900px){.p-logistica .lx-sec .lead{font-size:19px}}
+
+/* il problema */
+.p-logistica .lx-split{display:grid;gap:36px}
+@media(min-width:900px){.p-logistica .lx-split{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:80px;align-items:start}}
+.p-logistica .lx-pain{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--lx-line)}
+.p-logistica .lx-pain li{padding:18px 0;border-bottom:1px solid var(--lx-line);display:grid;gap:4px}
+.p-logistica .lx-pain b{font:600 18px/1.3 var(--h)}
+.p-logistica .lx-pain span{font-size:16px;line-height:1.5;color:var(--ink2)}
+@media(min-width:600px){.p-logistica .lx-pain{grid-template-columns:1fr 1fr;column-gap:32px}.p-logistica .lx-pain li{padding:22px 0}}
+.p-logistica .lx-stat{margin-top:48px;padding:26px 24px;background:var(--paper);border-left:3px solid var(--green);border-radius:2px 12px 12px 2px}
+.p-logistica .lx-stat p:first-child{font:500 clamp(18px,4.4vw,24px)/1.4 var(--h);letter-spacing:-.01em;margin:0 0 14px;max-width:34em}
+.p-logistica .lx-stat b{font-weight:600;color:var(--green-d)}
+.p-logistica .lx-stat .src{margin:0;color:#6B706A}
+@media(min-width:900px){.p-logistica .lx-stat{margin-top:72px;padding:36px 40px}}
+
+/* servizi */
+.p-logistica .lx-serv-grid{display:grid;gap:32px;margin-top:40px}
+@media(min-width:900px){.p-logistica .lx-serv-grid{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:48px;margin-top:56px}}
+.p-logistica .lx-serv{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+@media(min-width:600px){.p-logistica .lx-serv{grid-template-columns:1fr 1fr;gap:16px}}
+.p-logistica .lx-serv li{background:#fff;border:1px solid var(--lx-line);border-radius:14px;padding:24px 22px}
+.p-logistica .lx-n{display:block;font:600 13px/1 var(--h);color:var(--green-d);letter-spacing:.06em;margin-bottom:18px}
+.p-logistica .lx-serv b{display:block;font:600 19px/1.25 var(--h);margin-bottom:8px}
+.p-logistica .lx-serv p{margin:0;font-size:16px;line-height:1.55;color:var(--ink2)}
+.p-logistica .lx-serv-fig{margin:0;border-radius:14px;overflow:hidden;background:var(--ink);height:300px}
+.p-logistica .lx-serv-fig img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+@media(min-width:900px){.p-logistica .lx-serv-fig{height:auto;position:relative;min-height:320px}.p-logistica .lx-serv-fig img{position:absolute;inset:0}}
+.p-logistica .lx-motto{font:600 clamp(22px,5vw,32px)/1.2 var(--h);letter-spacing:-.02em;margin:48px 0 0;padding-top:32px;border-top:1px solid var(--lx-line)}
+.p-logistica .lx-motto span{color:var(--green-d)}
+
+/* tabelle */
+.p-logistica .lx-table-wrap{margin-top:40px}
+.p-logistica table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.45}
+.p-logistica th,.p-logistica td{text-align:left;vertical-align:top}
+.p-logistica .lx-vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* copertura */
+.p-logistica .lx-cov thead{display:none}
+.p-logistica .lx-cov tbody tr{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:16px 0;border-bottom:1px solid var(--lx-dline)}
+.p-logistica .lx-cov tbody tr:first-child{border-top:1px solid var(--lx-dline)}
+.p-logistica .lx-cov tbody th{font:600 17px/1.3 var(--h);color:#fff}
+.p-logistica .lx-cov td[data-l]{font-size:14px;color:var(--lx-mute);text-align:right;padding-top:2px}
+.p-logistica .lx-cov td[data-l]::before{content:attr(data-l) " "}
+.p-logistica .lx-cov td:last-child{grid-column:1/-1;color:#D2D6D1;font-size:16px;margin-top:4px}
+.p-logistica .lx-cov td b{font:600 18px/1 var(--h);color:var(--lime);margin-right:4px}
+.p-logistica .lx-cov small{display:block;font-size:12px;color:#8C918B;margin-top:4px}
+.p-logistica .lx-on{display:inline-flex;align-items:center;gap:8px;color:#fff}
+.p-logistica .lx-on::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+.p-logistica .lx-note{margin:22px 0 0;max-width:48em}
+@media(min-width:760px){
+  .p-logistica .lx-cov thead{display:table-header-group}
+  .p-logistica .lx-cov thead th{font:500 12px/1.2 var(--b);letter-spacing:.12em;text-transform:uppercase;color:var(--lx-mute);padding:0 20px 14px 0;border-bottom:1px solid rgba(255,255,255,.22)}
+  .p-logistica .lx-cov tbody tr{display:table-row;padding:0}
+  .p-logistica .lx-cov tbody th,.p-logistica .lx-cov tbody td{padding:16px 20px 16px 0;border-bottom:1px solid var(--lx-dline)}
+  .p-logistica .lx-cov tbody tr:first-child{border-top:0}
+  .p-logistica .lx-cov td[data-l]{font-size:16px;color:#D2D6D1;text-align:left;padding-top:16px}
+  .p-logistica .lx-cov tbody th,.p-logistica .lx-cov tbody td{vertical-align:middle}
+  .p-logistica .lx-cov td[data-l]::before{content:none}
+  .p-logistica .lx-cov td:last-child{margin:0}
+  .p-logistica .lx-cov small{display:inline;margin:0 0 0 10px}
+  .p-logistica .lx-cov thead th:first-child{width:22%}
+  .p-logistica .lx-cov thead th:nth-child(2){width:24%}
+}
+
+/* contrassegno: passi */
+.p-logistica .lx-steps{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:0;counter-reset:s}
+.p-logistica .lx-steps li{counter-increment:s;position:relative;padding:0 0 26px 54px}
+.p-logistica .lx-steps li::before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;border:1px solid var(--green);color:var(--green-d);display:grid;place-items:center;font:600 15px/1 var(--h);background:#fff}
+.p-logistica .lx-steps li::after{content:"";position:absolute;left:18px;top:40px;bottom:4px;width:1px;background:var(--lx-line)}
+.p-logistica .lx-steps li:last-child{padding-bottom:0}
+.p-logistica .lx-steps li:last-child::after{display:none}
+.p-logistica .lx-steps li:last-child::before{background:var(--green);color:#fff;border-color:var(--green)}
+.p-logistica .lx-steps b{display:block;font:600 19px/1.25 var(--h);padding-top:6px;margin-bottom:4px}
+.p-logistica .lx-steps p{margin:0;color:var(--ink2);font-size:16px}
+@media(min-width:900px){
+  .p-logistica .lx-steps{grid-template-columns:repeat(4,1fr);gap:32px;margin-top:56px}
+  .p-logistica .lx-steps li{padding:56px 0 0}
+  .p-logistica .lx-steps li::after{left:44px;right:-24px;top:18px;bottom:auto;width:auto;height:1px}
+}
+.p-logistica .lx-panel{margin-top:48px;border:1px solid var(--lx-line);border-radius:14px;padding:24px 22px;background:var(--paper)}
+.p-logistica .lx-panel-t{font:500 12px/1.3 var(--b);letter-spacing:.12em;text-transform:uppercase;color:#6B706A;margin:0 0 14px}
+.p-logistica .lx-states{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.p-logistica .lx-states li{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--lx-line);border-radius:999px;padding:10px 16px;font:500 15px/1 var(--h)}
+.p-logistica .lx-states i{width:18px;height:18px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/13px no-repeat}
+.p-logistica .lx-panel-f{margin:16px 0 0;font-size:15px;color:var(--ink2);max-width:44em}
+@media(min-width:900px){.p-logistica .lx-panel{display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:center;padding:28px 32px}.p-logistica .lx-panel-t{margin:0}.p-logistica .lx-panel-f{grid-column:1/-1;margin:4px 0 0}}
+
+/* confronto */
+.p-logistica .lx-cmp{background:#fff;border:1px solid var(--lx-line);border-radius:14px;overflow:hidden;border-collapse:separate;border-spacing:0}
+.p-logistica .lx-cmp thead th{font:500 12px/1.3 var(--b);letter-spacing:.1em;text-transform:uppercase;color:#6B706A;padding:16px 14px;border-bottom:1px solid var(--lx-line)}
+.p-logistica .lx-cmp thead th.lx-us{color:var(--green-d)}
+.p-logistica .lx-cmp tbody th{font:600 15px/1.3 var(--h);padding:14px 14px 4px}
+.p-logistica .lx-cmp td{padding:4px 14px 14px;font-size:15px;color:var(--ink2)}
+.p-logistica .lx-cmp td.lx-us{color:var(--ink);font-weight:500;background:rgba(46,168,83,.06)}
+.p-logistica .lx-cmp thead th.lx-us{background:rgba(46,168,83,.06)}
+/* telefono: la voce sta sopra, le due colonne sotto */
+.p-logistica .lx-cmp thead tr,.p-logistica .lx-cmp tbody tr{display:grid;grid-template-columns:1fr 1fr}
+.p-logistica .lx-cmp thead th:first-child{display:none}
+.p-logistica .lx-cmp tbody th{grid-column:1/-1}
+.p-logistica .lx-cmp tbody tr{border-bottom:1px solid var(--lx-line)}
+.p-logistica .lx-cmp tbody tr:last-child{border-bottom:0}
+@media(min-width:760px){
+  .p-logistica .lx-cmp thead tr,.p-logistica .lx-cmp tbody tr{display:table-row}
+  .p-logistica .lx-cmp thead th:first-child{display:table-cell;width:26%}
+  .p-logistica .lx-cmp thead th{padding:20px 24px}
+  .p-logistica .lx-cmp tbody th,.p-logistica .lx-cmp td{padding:18px 24px;border-top:1px solid var(--lx-line);font-size:16px}
+  .p-logistica .lx-cmp tbody tr:first-child th,.p-logistica .lx-cmp tbody tr:first-child td{border-top:0}
+}
+
+/* come si parte */
+.p-logistica .lx-start{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:12px;counter-reset:p}
+.p-logistica .lx-start li{counter-increment:p;background:var(--panel);border:1px solid var(--lx-dline);border-radius:14px;padding:22px 20px}
+.p-logistica .lx-start li::before{content:"0" counter(p);display:block;font:600 13px/1 var(--h);color:var(--lime);letter-spacing:.06em;margin-bottom:14px}
+.p-logistica .lx-start b{display:block;font:600 18px/1.3 var(--h);color:#fff;margin-bottom:6px}
+.p-logistica .lx-start p{margin:0;font-size:16px;line-height:1.5;color:#C4C8C3}
+@media(min-width:600px){.p-logistica .lx-start{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.p-logistica .lx-start{grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}.p-logistica .lx-start li{padding:28px 24px}}
+.p-logistica .lx-risk{margin-top:56px;padding-top:40px;border-top:1px solid var(--lx-dline);display:grid;gap:24px}
+.p-logistica .lx-risk h3{font-size:clamp(22px,5vw,28px);font-weight:600;margin:0}
+@media(min-width:900px){.p-logistica .lx-risk{grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:48px;margin-top:72px}}
+.p-logistica .lx-ticks{list-style:none;padding:0;margin:0;display:grid;gap:18px}
+@media(min-width:900px){.p-logistica .lx-ticks{grid-template-columns:repeat(3,1fr);gap:28px}}
+.p-logistica .lx-ticks li{position:relative;padding-left:32px;font-size:16px;line-height:1.5;color:#C4C8C3}
+.p-logistica .lx-ticks b{display:block;color:#fff;font:600 17px/1.3 var(--h);margin-bottom:4px}
+.p-logistica .lx-ticks li::before{content:"";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.p-logistica .lx-mid{margin-top:48px}
+
+/* finale */
+.p-logistica .final h2 span{color:var(--lime)}
+
+/* comparse leggere: solo con html.m e solo sugli elementi che il JS ha marcato */
+html.m .p-logistica .lx-r{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+html.m .p-logistica .lx-r.in{opacity:1;transform:none}
+.p-logistica h1,.p-logistica h2,.p-logistica h3{text-wrap:balance}

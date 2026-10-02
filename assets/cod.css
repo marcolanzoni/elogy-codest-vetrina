@@ -1,0 +1,120 @@
+/* Aggiunte della landing contrassegno Est sopra b.css + modulo.css (copiati da elogy-landing-bf26/viaggio) */
+
+/* bozza: striscia in alto, solo locale */
+.draft{position:relative;z-index:30;background:#F2C14E;color:var(--ink);font:600 12px/1.3 var(--h);letter-spacing:.06em;text-align:center;padding:7px 16px}
+.draft+.top{top:30px}
+
+/* hero: immagine verticale dello spot, il video arriverà */
+.hero-video{background:var(--ink)}
+.hero h1 .l2{display:block;color:var(--lime)}
+.hero .sub b{color:#fff;font-weight:500}
+.src{font-size:12px;line-height:1.45;color:#8C918B;max-width:46em;margin:18px 0 0}
+.src a{color:inherit}
+
+/* barra delle prove sotto l'hero */
+.proofs{background:var(--deep);color:#fff;border-top:1px solid #262A29;border-bottom:1px solid #262A29}
+.proofs ul{list-style:none;margin:0 auto;max-width:1180px;padding:22px 20px;display:grid;gap:14px 28px;grid-template-columns:1fr 1fr}
+.proofs li{font:400 14px/1.35 var(--b);color:#C4C8C3}
+.proofs b{display:block;font:700 clamp(18px,2vw,24px)/1.15 var(--h);color:#fff;letter-spacing:-.01em;margin-bottom:4px}
+.proofs li:first-child b{color:var(--lime)}
+@media(min-width:900px){.proofs ul{grid-template-columns:repeat(4,1fr);padding:30px 20px}}
+
+/* problema: otto paesi, otto logistiche */
+.lg{width:100%;height:auto;overflow:visible}
+.lg-link{fill:none;stroke:#9DA29D;stroke-width:2.5;stroke-linecap:round;transition:stroke .4s}
+.problem.knot .lg-link{stroke:#C0392B;opacity:.75}
+.lg-node rect{fill:#fff;stroke:var(--ink);stroke-width:2}
+.lg-node text{font:700 18px var(--h);fill:var(--ink)}
+.lg-node .ic{fill:#C9CDC8}
+.lg-node .ic2{fill:none;stroke:#C9CDC8;stroke-width:3}
+.lg-store rect{fill:var(--ink)}
+.lg-store text{font:600 18px var(--h);fill:#fff}
+.m .lg-node{transform-box:fill-box}
+
+/* viaggio: forme nuove */
+.f-row{font:500 21px var(--b);fill:#8A8F8A}
+.rc-row circle{fill:#fff;stroke:var(--grey);stroke-width:3;transition:fill .3s,stroke .3s}
+.rc-row path{fill:none;stroke:#fff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .3s}
+.rc-row text{font:500 22px var(--b);fill:#8A8F8A;transition:fill .3s}
+.rc-row.on circle{fill:var(--green);stroke:var(--green)} .rc-row.on path{opacity:1} .rc-row.on text{fill:var(--ink)}
+html:not(.m) .rc-row circle{fill:var(--green);stroke:var(--green)} html:not(.m) .rc-row path{opacity:1} html:not(.m) .rc-row text{fill:var(--ink)}
+.cash rect{fill:#7FB86A;stroke:#3F7A34;stroke-width:3} .cash circle{fill:none;stroke:#3F7A34;stroke-width:3}
+.paid circle,.ok circle{fill:var(--green)} .paid path{fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.paid text{font:600 22px var(--h);fill:#fff}
+.s-route-on{fill:none;stroke:var(--lime);stroke-width:5;stroke-linecap:round}
+.s-cty circle{fill:var(--ink2);stroke:var(--ink3);stroke-width:3} .s-cty text{font:600 22px var(--h);fill:var(--grey)}
+.s-cty.hot circle{fill:var(--green);stroke:var(--lime)} .s-cty.hot text{fill:#fff}
+.s-van rect{fill:none;stroke:var(--ink3);stroke-width:3} .s-van text{font:500 17px var(--b);fill:#8A8F8A}
+.s-bars rect{fill:var(--green);opacity:.5}
+.lb-t2{font:700 11px var(--h);letter-spacing:.06em;fill:var(--green-d)}
+
+/* mappa dei paesi */
+.map{background:var(--paper);color:var(--ink);padding:80px 0}
+@media(min-width:900px){.map{padding:110px 0}}
+.map h2,.cod h2,.trial h2,.lang h2{font-size:clamp(30px,4.6vw,54px);font-weight:700;max-width:16em}
+.map .lead{color:var(--ink2)}
+.map-grid{display:grid;gap:40px;margin-top:36px}
+@media(min-width:900px){.map-grid{grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}}
+.tiles{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;max-width:560px}
+.tile{aspect-ratio:1;border-radius:10px;background:#E4E7E2;color:var(--ink3);display:flex;flex-direction:column;justify-content:space-between;padding:6px 7px;position:relative;font:700 13px/1 var(--h)}
+.tile small{font:500 10px/1.1 var(--b);letter-spacing:.02em}
+.tile .pc{font:700 clamp(11px,1.6vw,17px)/1 var(--h);color:var(--ink)}
+.tile.c{background:color-mix(in srgb,var(--lime) calc((var(--s) - .25) * 190%),#E4E7E2);color:var(--ink)}
+.tile.hub{outline:3px solid var(--green);outline-offset:-3px}
+.tile.hub::after{content:"";position:absolute;top:6px;right:6px;width:8px;height:8px;border-radius:2px;background:var(--green)}
+.tile.dim{background:#EEF0ED;color:#8A8F8A}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:16px 0 0;padding:0;list-style:none;font-size:13px;color:var(--ink2)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;background:#E4E7E2}
+.legend .k-hub{outline:3px solid var(--green);outline-offset:-3px;background:#fff}
+.legend .k-cod{background:var(--lime)}
+.ctry h3{font:600 13px/1 var(--b);letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);margin:0 0 12px}
+.ctry ul{list-style:none;margin:0 0 28px;padding:0}
+.ctry li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;border-top:1px solid var(--line);padding:11px 0;font-size:15px;line-height:1.35}
+.ctry li b{font:600 16px var(--h)}
+.ctry li span{color:var(--ink3);font-size:13px;text-align:right}
+.ctry li strong{font:700 20px var(--h);color:var(--ink)}
+.ctry .src{color:#6B716C;margin-top:-12px}
+
+/* come funziona il contrassegno */
+.cod{background:var(--ink);color:#fff;padding:80px 0}
+@media(min-width:900px){.cod{padding:110px 0}}
+.cod .eyebrow,.trial .eyebrow,.lang .eyebrow{color:var(--lime)}
+.cod .lead{color:#C4C8C3}
+.cod-steps{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:14px;counter-reset:c}
+@media(min-width:760px){.cod-steps{grid-template-columns:repeat(4,1fr)}}
+.cod-steps li{background:var(--panel);border:1px solid #2A2E2D;border-radius:16px;padding:22px 20px;counter-increment:c}
+.cod-steps li::before{content:"0" counter(c);display:inline-grid;place-items:center;min-width:34px;height:24px;border:1px solid rgba(155,225,93,.5);border-radius:99px;font:600 11px/1 var(--h);color:var(--lime);margin-bottom:14px}
+.cod-steps b{display:block;font:700 22px/1.1 var(--h);margin-bottom:8px}
+.cod-steps p{margin:0;color:#C4C8C3;font-size:15px;line-height:1.45}
+.dash{margin-top:40px;background:var(--paper);color:var(--ink);border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.dash-h{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#E4E7E2;padding:12px 18px;font:600 13px/1 var(--h)}
+.dash-h em{font-style:normal;font:600 11px/1 var(--h);letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);background:rgba(155,225,93,.35);padding:6px 10px;border-radius:99px}
+.dash table{width:100%;border-collapse:collapse;font-size:14px}
+.dash th{font:500 11px/1 var(--b);letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);text-align:left;padding:14px 18px 10px}
+.dash td{border-top:1px solid var(--line);padding:12px 18px}
+.chip{display:inline-block;font:600 12px/1 var(--h);padding:6px 10px;border-radius:99px;background:#EEF0ED;color:var(--ink3);white-space:nowrap}
+.chip.g{background:var(--green);color:#fff} .chip.l{background:rgba(155,225,93,.4);color:var(--ink)} .chip.w{background:#FBE3B0;color:#6B4D00}
+@media(max-width:600px){.dash .hide-s{display:none}.dash th,.dash td{padding-left:12px;padding-right:12px}}
+.cod-q{margin-top:34px;font:500 clamp(20px,2.2vw,26px)/1.35 var(--h);max-width:30em}
+.cod-q b{color:var(--lime);font-weight:600}
+
+/* L'Est in italiano (solo IT) e prova un paese */
+.lang{background:var(--deep);color:#fff;padding:80px 0;overflow:hidden}
+.lang .lead{color:#C4C8C3}
+.lang figure,.trial figure{margin:0;border-radius:18px;overflow:hidden;max-width:420px;aspect-ratio:4/5;background:var(--panel)}
+.lang figure img,.trial figure img{width:100%;height:100%;object-fit:cover}
+.trial{background:var(--green);color:var(--ink);padding:80px 0}
+@media(min-width:900px){.lang,.trial{padding:110px 0}}
+.trial .eyebrow{color:var(--ink)}
+.trial .lead{color:var(--ink)}
+.ticks{list-style:none;margin:26px 0 30px;padding:0;display:grid;gap:12px}
+.ticks li{position:relative;padding-left:34px;font:500 18px/1.4 var(--h)}
+.ticks li::before{content:"✓";position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--lime);display:grid;place-items:center;font-size:13px}
+.trial .btn{background:var(--ink)} .trial .btn:hover{background:#000}
+.lang .ticks li::before{background:var(--green);color:#fff}
+@media(max-width:899px){.m .pb-visual .lg{height:calc(100% - 26px);width:auto;margin:0 auto}}
+@media(max-width:899px){.j-panel .st-copy{padding-bottom:calc(92px + env(safe-area-inset-bottom))}.j-panel{height:46%}}
+/* paesi col contrassegno attivo senza quota pubblica (2 ott 2026: lista sempre completa) */
+.tile.on{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px rgba(46,168,83,.35)}
+.tile.on .pc{color:var(--green-d)}
+.legend .k-on{background:#fff;box-shadow:inset 0 0 0 1px rgba(46,168,83,.35);color:var(--green-d);font:700 10px/14px var(--h);text-align:center;font-style:normal}

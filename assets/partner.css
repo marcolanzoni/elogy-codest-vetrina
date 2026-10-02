@@ -1,0 +1,86 @@
+/* eLogy · landing «partner» (IT/EN) · pagina corta, senza effetti allo scorrimento */
+/* hero: testo in alto, una sola immagine; niente effetti allo scorrimento */
+.p-partner .hero{position:relative;background:var(--ink);color:#fff;padding:82px 0 0;overflow:hidden}
+.p-partner .hero-in{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 20px}
+.p-partner .hero h1{font-size:clamp(30px,8.6vw,64px);font-weight:700;margin:0 0 .4em;max-width:12.5em}
+.p-partner .hero h1 span{display:block;color:var(--lime)}
+.p-partner .kicker{margin-bottom:14px}
+.p-partner .hero .sub{font-size:17px;line-height:1.5;color:#D9DCD8;max-width:33em;margin:0 0 20px}
+.p-partner .hero .sub b{color:#fff;font-weight:500}
+.p-partner .hero-actions{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.p-partner .hero-actions .note{font-size:15px;color:#A9AEA8}
+.p-partner .hero .src{margin:14px 0 0;max-width:40em}
+.p-partner .hero-fig{position:relative;margin:-64px 0 0;height:min(120vw,540px)}
+.p-partner .hero-fig img{width:100%;height:100%;object-fit:cover;object-position:center 18%;animation:pt-in .7s ease-out both}
+.p-partner .hero-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--ink) 0%,rgba(21,23,22,0) 28%,rgba(21,23,22,0) 72%,var(--ink) 100%)}
+@keyframes pt-in{from{opacity:.35}to{opacity:1}}
+@media(min-width:900px){
+  .p-partner .hero{min-height:min(100vh,880px);display:flex;align-items:center;padding:110px 0 72px}
+  .p-partner .hero-in{width:100%}
+  .p-partner .hero-in>*{max-width:600px}
+  .p-partner .hero h1{font-size:min(4.6vw,58px);max-width:600px}
+  .p-partner .hero .sub{font-size:20px}
+  .p-partner .hero-fig{position:absolute;top:0;right:0;bottom:0;width:46%;height:auto;margin:0}
+  .p-partner .hero-fig img{object-position:center 30%}
+  .p-partner .hero-fig::after{background:linear-gradient(90deg,var(--ink) 0%,rgba(21,23,22,.35) 32%,rgba(21,23,22,0) 65%),linear-gradient(0deg,var(--ink) 0%,rgba(21,23,22,0) 22%)}
+}
+
+/* sezioni */
+.p-partner .sec{padding:64px 0}
+@media(min-width:900px){.p-partner .sec{padding:100px 0}}
+.p-partner .dark{background:var(--ink);color:#fff}
+.p-partner .deep{background:var(--deep);color:#fff}
+.p-partner .light{background:var(--paper);color:var(--ink)}
+.p-partner .sec h2{font-size:clamp(28px,6.6vw,46px);font-weight:600;max-width:20em}
+.p-partner .dark .lead,.p-partner .deep .lead{color:#C4C8C3}
+.p-partner .dark .eyebrow,.p-partner .deep .eyebrow{color:var(--lime)}
+.p-partner .light .lead{color:var(--ink2)}
+.p-partner .motto{font:600 clamp(20px,4.6vw,28px)/1.25 var(--h);letter-spacing:-.02em;margin:34px 0 0}
+.p-partner .motto span{color:var(--green-d)}
+.p-partner .dark .motto span,.p-partner .deep .motto span{color:var(--lime)}
+
+/* prove + rischio tolto */
+.p-partner .proofs{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden}
+.p-partner .proofs li{background:var(--panel);padding:20px 16px;font-size:16px;line-height:1.4;color:#C4C8C3}
+.p-partner .proofs b{display:block;font:600 19px/1.2 var(--h);color:#fff;margin-bottom:6px;letter-spacing:-.01em}
+@media(min-width:900px){.p-partner .proofs{grid-template-columns:repeat(4,1fr)}.p-partner .proofs li{padding:28px 24px}.p-partner .proofs b{font-size:22px}}
+.p-partner .ticks{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px}
+@media(min-width:900px){.p-partner .ticks{grid-template-columns:repeat(3,1fr);gap:28px}}
+.p-partner .ticks li{position:relative;padding-left:34px;font-size:16px;line-height:1.5;color:#C4C8C3}
+.p-partner .ticks li b{display:block;color:#fff;font:600 17px/1.3 var(--h);margin-bottom:2px}
+.p-partner .ticks li::before{content:"";position:absolute;left:0;top:2px;width:22px;height:22px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.p-partner .risk{margin-top:52px;padding-top:40px;border-top:1px solid rgba(255,255,255,.1)}
+.p-partner .risk h3{font-size:clamp(22px,5vw,30px);font-weight:600;margin:0}
+.p-partner .mid{margin-top:30px}
+
+/* finale */
+.p-partner .final h2 span{color:var(--lime)}
+
+/* cosa resta a te / cosa facciamo noi */
+.p-partner .split{display:grid;gap:12px;margin:32px 0 0}
+@media(min-width:900px){.p-partner .split{grid-template-columns:.85fr 1.15fr;gap:18px}}
+.p-partner .col{border-radius:18px;padding:24px 20px}
+@media(min-width:900px){.p-partner .col{padding:32px 30px}}
+.p-partner .col h3{font:600 14px/1.2 var(--b);letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px}
+.p-partner .col ul{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.p-partner .col li{position:relative;padding-left:22px;font-size:16px;line-height:1.45}
+.p-partner .col li b{font-weight:500}
+.p-partner .col li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%}
+.p-partner .you{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.p-partner .you h3{color:var(--ink3)}
+.p-partner .you li::before{background:var(--ink3)}
+.p-partner .us{background:var(--ink);color:#D9DCD8}
+.p-partner .us h3{color:var(--lime)}
+.p-partner .us li b{color:#fff}
+.p-partner .us li::before{background:var(--lime)}
+
+/* come si parte */
+.p-partner .steps{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:12px;counter-reset:s}
+@media(min-width:900px){.p-partner .steps{grid-template-columns:repeat(3,1fr);gap:16px}}
+.p-partner .steps li{counter-increment:s;background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px 20px;color:#C4C8C3;line-height:1.5}
+.p-partner .steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;font:600 17px/1 var(--h);margin-bottom:14px}
+.p-partner .steps b{display:block;font:600 20px/1.25 var(--h);color:#fff;margin-bottom:6px}
+.p-partner .steps p{margin:0}
+.p-partner .pc-t{margin:28px 0 10px;font:600 15px/1.3 var(--h);color:var(--lime)}
+.p-partner .pc{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.p-partner .pc li{font-size:16px;line-height:1.2;color:#fff;background:var(--panel);border:1px solid rgba(155,225,93,.28);border-radius:999px;padding:9px 14px}

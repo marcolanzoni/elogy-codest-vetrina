@@ -1,0 +1,160 @@
+/* eLogy · landing «scegli»: Dove vuoi vendere? Porte dei paesi + scheda del paese.
+   Senza JS: le schede stanno tutte in elenco. Con JS (html.sj): si vede quella della porta toccata. */
+.p-scegli{background:var(--deep);color:#fff}
+.p-scegli h2{font-size:clamp(28px,4.4vw,46px);font-weight:600}
+.p-scegli .eyebrow{color:var(--lime)}
+.p-scegli .src{color:#8E948D}
+
+/* ---------- 1 · domanda e porte ---------- */
+.p-scegli .sc-hero{position:relative;overflow:hidden;background:var(--deep);padding:78px 0 40px}
+.p-scegli .sc-bg{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 30%;opacity:.55}
+.p-scegli .sc-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,15,.78) 0%,rgba(14,16,15,.88) 45%,var(--deep) 100%)}
+.p-scegli .sc-in{position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:0 16px}
+.p-scegli .sc-hero .kicker{margin-bottom:10px;font-size:12px}
+.p-scegli h1{font-size:clamp(36px,10.4vw,72px);font-weight:700;margin:0 0 10px;letter-spacing:-.035em}
+.p-scegli .sc-sub{font-size:18px;line-height:1.4;color:#D4D8D2;margin:0 0 16px;max-width:520px}
+.p-scegli .sc-sub b{color:#fff;font-weight:500;white-space:nowrap}
+
+.p-scegli .doors{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0}
+.p-scegli .door{position:relative;display:flex;align-items:center;justify-content:center;min-height:50px;padding:6px 4px 8px;
+  border-radius:12px 12px 4px 4px;background:linear-gradient(180deg,#262A2B 0%,#1A1D1C 100%);border:1px solid rgba(255,255,255,.16);
+  color:#E8EBE6;text-decoration:none;font:600 16px/1.1 var(--h);letter-spacing:-.025em;text-align:center;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 6px 18px rgba(0,0,0,.35);
+  transition:border-color .18s,box-shadow .18s,background .18s,color .18s,transform .12s;-webkit-tap-highlight-color:transparent}
+.p-scegli .door::before{content:"";position:absolute;inset:4px 4px 6px;border:1px solid rgba(255,255,255,.05);border-radius:9px 9px 2px 2px;pointer-events:none}
+.p-scegli .door::after{content:"";position:absolute;right:5px;top:50%;width:2px;height:12px;margin-top:-7px;border-radius:2px;background:rgba(255,255,255,.28);transition:background .18s}
+.p-scegli .door i{position:absolute;left:10%;right:10%;bottom:-1px;height:2px;border-radius:2px;background:var(--lime);opacity:0;transition:opacity .18s;box-shadow:0 0 12px 2px rgba(155,225,93,.55)}
+.p-scegli .door:hover{border-color:rgba(255,255,255,.4);color:#fff}
+.p-scegli .door:active{transform:scale(.97)}
+.p-scegli .door:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.p-scegli .door[aria-pressed="true"]{border-color:var(--lime);color:#fff;background:linear-gradient(180deg,#2C3527 0%,#1B211A 100%);
+  box-shadow:0 0 0 1px var(--lime),0 0 24px rgba(155,225,93,.28),inset 0 1px 0 rgba(155,225,93,.2)}
+.p-scegli .door[aria-pressed="true"]::after{background:var(--lime)}
+.p-scegli .door[aria-pressed="true"] i{opacity:1}
+.p-scegli .door.cur{background:linear-gradient(180deg,#36452D 0%,#202A1D 100%)}
+.p-scegli .door.wide{grid-column:span 2}
+.p-scegli .sc-hint{font-size:14px;color:#A9AEA8;margin:8px 0 12px}
+.p-scegli .sc-cta .btn{width:100%;min-height:52px}
+
+/* ---------- schede dei paesi ---------- */
+.p-scegli .schede{margin-top:28px}
+.p-scegli .sc-ph,.p-scegli .sc-multi{display:none}
+.p-scegli .scheda{background:linear-gradient(180deg,#1F2322 0%,#181B1A 100%);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:22px 20px 22px;margin:0 0 14px;scroll-margin-top:16px}
+.p-scegli .scheda header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.p-scegli .scheda h2{font-size:30px;margin:0;order:-1}
+.p-scegli .sc-k{font:500 12px/1.2 var(--b);letter-spacing:.14em;text-transform:uppercase;color:#8E948D;margin:0}
+.p-scegli .sc-stat{display:flex;align-items:center;gap:14px;padding:16px;border-radius:14px;background:rgba(155,225,93,.07);border:1px solid rgba(155,225,93,.22)}
+.p-scegli .sc-stat b{font:700 40px/1 var(--h);color:var(--lime);letter-spacing:-.03em;flex:none}
+.p-scegli .sc-stat p{margin:0;font-size:16px;line-height:1.4;color:#E1E5DF}
+.p-scegli .sc-stat.txt{display:block}
+.p-scegli .sc-stat.txt b{display:block;font-size:26px;margin-bottom:8px}
+.p-scegli .scheda .src{margin:8px 2px 0}
+.p-scegli .sc-from{margin:16px 0 0;font-size:16px;color:#E1E5DF;padding:12px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)}
+.p-scegli .sc-from span{display:block;font:500 12px/1.2 var(--b);letter-spacing:.14em;text-transform:uppercase;color:#8E948D;margin-bottom:4px}
+.p-scegli .sc-do{list-style:none;margin:14px 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.p-scegli .sc-do li{font-size:15px;line-height:1.25;padding:8px 12px 8px 30px;border-radius:999px;background:rgba(255,255,255,.06);position:relative;color:#E1E5DF}
+.p-scegli .sc-do li::before{content:"";position:absolute;left:12px;top:50%;width:9px;height:5px;margin-top:-4px;border-left:2px solid var(--lime);border-bottom:2px solid var(--lime);transform:rotate(-45deg)}
+.p-scegli .scheda .btn{width:100%;min-height:52px}
+.p-scegli .sc-note{margin:6px 2px 0}
+
+/* con JS: una scheda alla volta */
+.sj .p-scegli .scheda{display:none}
+.sj .p-scegli .scheda.on{display:block;animation:scIn .28s ease-out}
+.sj .p-scegli .sc-note{display:none}
+.sj .p-scegli .schede.has .sc-note{display:block}
+.sj .p-scegli .schede{margin-top:0}
+.sj .p-scegli .schede.has{margin-top:22px}
+.sj .p-scegli .schede.multi .sc-multi{display:block}
+@keyframes scIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.p-scegli .sc-multi{margin:0 0 12px}
+.p-scegli .sc-multi p{margin:0 0 10px;font-size:17px;color:#E1E5DF}
+.p-scegli .sc-multi b{color:var(--lime);font-weight:500}
+.p-scegli .sc-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.p-scegli .sc-tabs button{min-height:40px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:transparent;color:#E1E5DF;font:500 15px/1 var(--h);cursor:pointer}
+.p-scegli .sc-tabs button[aria-current="true"]{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+
+/* ---------- 2 · perché un solo partner ---------- */
+.p-scegli .sc-why{padding:72px 0;background:var(--ink)}
+.p-scegli .sc-why h2 span{color:var(--lime)}
+.p-scegli .vs{display:grid;gap:14px;margin-top:28px}
+.p-scegli .vs>div{border-radius:18px;padding:22px 20px}
+.p-scegli .vs h3{font-size:20px;margin:0 0 12px}
+.p-scegli .vs ul{margin:0;padding:0;list-style:none}
+.p-scegli .vs li{position:relative;padding:8px 0 8px 26px;border-top:1px solid rgba(255,255,255,.08)}
+.p-scegli .vs li:first-child{border-top:0}
+.p-scegli .vs-a{background:#1B1D1D;border:1px solid rgba(255,255,255,.08);color:#B9BEB8}
+.p-scegli .vs-a li::before{content:"";position:absolute;left:4px;top:19px;width:10px;height:2px;background:#6B706A}
+.p-scegli .vs-x{margin:12px 0 0;color:#fff;font-weight:500}
+.p-scegli .vs-b{background:linear-gradient(180deg,#20291D,#191E18);border:1px solid rgba(155,225,93,.35);color:#E1E5DF}
+.p-scegli .vs-b b{color:#fff;font-weight:500}
+.p-scegli .vs-b li::before{content:"";position:absolute;left:3px;top:16px;width:9px;height:5px;border-left:2px solid var(--lime);border-bottom:2px solid var(--lime);transform:rotate(-45deg)}
+.p-scegli .claim{margin-top:40px;max-width:760px}
+.p-scegli .claim-t{font:700 clamp(30px,5vw,52px)/1.05 var(--h);letter-spacing:-.03em;margin:0 0 18px}
+.p-scegli .claim-t span{color:var(--lime);display:block}
+.p-scegli .claim p{color:#D4D8D2}
+
+/* ---------- 3 · contrassegno in quattro passi ---------- */
+.p-scegli .sc-cod{padding:72px 0;background:var(--deep)}
+.p-scegli .steps{list-style:none;margin:30px 0 0;padding:0;counter-reset:s;display:grid;gap:0}
+.p-scegli .steps li{counter-increment:s;position:relative;padding:0 0 26px 58px}
+.p-scegli .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:600 17px/1 var(--h);color:var(--ink);background:var(--lime)}
+.p-scegli .steps li::after{content:"";position:absolute;left:19px;top:44px;bottom:4px;width:2px;background:linear-gradient(var(--lime),rgba(155,225,93,.15))}
+.p-scegli .steps li:last-child{padding-bottom:0}
+.p-scegli .steps li:last-child::after{display:none}
+.p-scegli .steps b{display:block;font:600 21px/1.2 var(--h);margin:7px 0 4px}
+.p-scegli .steps span{color:#C4C8C3}
+.p-scegli .cod-n{margin:30px 0 0;padding:16px 18px;border-left:2px solid var(--lime);background:rgba(255,255,255,.04);border-radius:0 12px 12px 0;color:#D4D8D2;max-width:760px}
+
+/* ---------- 4 · prove ---------- */
+.p-scegli .sc-proof{padding:8px 0 64px;background:var(--deep)}
+.p-scegli .sc-proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.p-scegli .sc-proof li{background:#1A1D1C;border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:18px 16px}
+.p-scegli .sc-proof b{display:block;font:600 19px/1.15 var(--h);color:#fff;margin-bottom:6px}
+.p-scegli .sc-proof li:first-child b{color:var(--lime)}
+.p-scegli .sc-proof span{display:block;font-size:15px;line-height:1.4;color:#B9BEB8}
+
+/* ---------- 5 · rischio tolto ---------- */
+.p-scegli .sc-risk{padding:72px 0;background:var(--ink)}
+.p-scegli .sc-risk .lead{color:#C4C8C3}
+.p-scegli .ticks{list-style:none;margin:0 0 22px;padding:0}
+.p-scegli .ticks li{position:relative;padding:12px 0 12px 32px;border-top:1px solid rgba(255,255,255,.1);color:#D4D8D2}
+.p-scegli .ticks li:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+.p-scegli .ticks li::before{content:"";position:absolute;left:4px;top:20px;width:10px;height:5px;border-left:2px solid var(--lime);border-bottom:2px solid var(--lime);transform:rotate(-45deg)}
+.p-scegli .ticks b{color:#fff;font-weight:500}
+
+/* ---------- finale ---------- */
+.p-scegli .sc-recap{color:#D4D8D2}
+.p-scegli .sc-recap b{color:var(--lime);font-weight:500}
+.p-scegli .faq .eyebrow{color:var(--green-d)}
+.p-scegli .faq h2{color:var(--ink)}
+
+/* ---------- computer ---------- */
+@media(min-width:600px){
+  .p-scegli .sc-in{padding:0 24px}
+  .p-scegli .sc-cta .btn{width:auto}
+  .p-scegli .sc-proof ul{grid-template-columns:repeat(4,1fr)}
+  .p-scegli .vs{grid-template-columns:1fr 1fr}
+}
+@media(min-width:900px){
+  .p-scegli .sc-hero{padding:104px 0 72px;min-height:min(100vh,860px)}
+  .p-scegli .sc-bg{left:auto;width:58%;object-position:50% 35%;opacity:.7}
+  .p-scegli .sc-veil{background:linear-gradient(90deg,var(--deep) 0%,var(--deep) 42%,rgba(14,16,15,.55) 72%,rgba(14,16,15,.7) 100%),linear-gradient(180deg,rgba(14,16,15,0) 70%,var(--deep) 100%)}
+  .p-scegli .sc-sub{font-size:19px;margin-bottom:26px}
+  .p-scegli .doors{gap:10px;max-width:540px}
+  .p-scegli .door{min-height:64px;font-size:17px}
+  .sj .p-scegli .sc-in{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:start}
+  .sj .p-scegli .schede,.sj .p-scegli .schede.has{margin-top:52px}
+  .sj .p-scegli .schede:not(.has) .sc-ph{display:block}
+  .p-scegli .sc-ph{background:rgba(24,27,26,.82);border:1px dashed rgba(255,255,255,.22);border-radius:20px;padding:30px 28px;color:#C4C8C3;backdrop-filter:blur(2px)}
+  .p-scegli .ph-t{font:600 30px/1.1 var(--h);color:#fff;margin:0 0 10px}
+  .p-scegli .sc-ph .sc-do{margin-bottom:0}
+  .p-scegli .scheda{padding:28px 28px 26px}
+  .p-scegli .sc-why,.p-scegli .sc-cod,.p-scegli .sc-risk{padding:110px 0}
+  .p-scegli .steps{grid-template-columns:repeat(4,1fr);gap:24px}
+  .p-scegli .steps li{padding:58px 0 0}
+  .p-scegli .steps li::after{left:48px;right:-20px;top:19px;bottom:auto;width:auto;height:2px}
+  .p-scegli .sc-proof{padding-bottom:110px}
+}
+@media(prefers-reduced-motion:reduce){.sj .p-scegli .scheda.on{animation:none}}
+/* sul telefono, a scheda aperta, il bottone della scheda prende il posto di quello dell'apertura */
+@media(max-width:899px){.sj .p-scegli .sc-in:has(.schede.has) .sc-cta{display:none}}
